@@ -32,7 +32,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     });
 
     // Initialize Pushwoosh. This will trigger all pending push notifications on start.
-    pushNotification.onDeviceReady({ projectid: "470858217527", appid : "E2775-E60A4" });
+    pushwoosh.onDeviceReady({ projectid: "470858217527", appid : "E2775-E60A4" });
 
     pushwoosh.registerDevice(
       function(status) {
