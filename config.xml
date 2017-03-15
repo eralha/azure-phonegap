@@ -21,7 +21,7 @@
     <preference name="disable-cursor" value="false" />
 
     <!-- ANDROID -->
-    <preference name="android-minSdkVersion" value="14" />
+    <preference name="android-minSdkVersion" value="16" />
     <preference name="android-installLocation" value="auto" />
 
     <!-- IOS -->
@@ -39,16 +39,7 @@
     </feature>
 
 
-  <plugin name="cordova-plugin-console" spec="https://github.com/apache/cordova-plugin-console" source="git" />
-  <plugin name="cordova-plugin-device" spec="https://github.com/apache/cordova-plugin-device" source="git" />
-  <plugin name="cordova-plugin-splashscreen" spec="https://github.com/apache/cordova-plugin-splashscreen" source="git" />
-  <plugin name="cordova-plugin-statusbar" spec="https://github.com/apache/cordova-plugin-statusbar" source="git" />
-  <plugin name="cordova-plugin-whitelist" spec="https://github.com/apache/cordova-plugin-whitelist" source="git" />
-  <plugin name="ionic-plugin-keyboard" spec="https://github.com/driftyco/ionic-plugin-keyboard" source="git" />
-
-  <!-- AZURE PLUGIN -->
-  <plugin name="cordova-plugin-ms-adal" spec="https://github.com/AzureAD/azure-activedirectory-library-for-cordova" source="git" />
-
+  
 
 
 
