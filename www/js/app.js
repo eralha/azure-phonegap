@@ -47,16 +47,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     );
   */
 
-    var notificationOpenedCallback = function(jsonData) {
-      alert("Notification opened:\n" + JSON.stringify(jsonData));
-      console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
-    };
+  window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
+  
+  var notificationOpenedCallback = function(jsonData) {
+    console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+  };
 
-    // TODO: Update with your OneSignal AppId before running.
-    window.plugins.OneSignal
-      .startInit("bbcee36f-fadf-4366-b65b-ead86557f5b4")
-      .handleNotificationOpened(notificationOpenedCallback)
-      .endInit();
+  window.plugins.OneSignal
+    .startInit("bbcee36f-fadf-4366-b65b-ead86557f5b4")
+    .handleNotificationOpened(notificationOpenedCallback)
+    .endInit();
 
 
   });//end ready event
