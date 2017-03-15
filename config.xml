@@ -39,6 +39,11 @@
     </feature>
 
 
+  <plugin name="cordova-plugin-console" spec="https://github.com/apache/cordova-plugin-console" source="git" />
+  <plugin name="cordova-plugin-device" spec="https://github.com/apache/cordova-plugin-device" source="git" />
+  <plugin name="cordova-plugin-splashscreen" spec="https://github.com/apache/cordova-plugin-splashscreen" source="git" />
+  <plugin name="cordova-plugin-statusbar" spec="https://github.com/apache/cordova-plugin-statusbar" source="git" />
+  <plugin name="cordova-plugin-whitelist" spec="https://github.com/apache/cordova-plugin-whitelist" source="git" />
   
 
 
