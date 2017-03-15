@@ -12,7 +12,6 @@
   <access origin="*"/>
 
     <preference name="permissions" value="none" />
-    <preference name='phonegap-version' value='cli-5.2.0' />
     <preference name="orientation" value="portrait" />
     <preference name="fullscreen" value="false" />
     <preference name="stay-in-webview" value="false" />
@@ -21,7 +20,7 @@
     <preference name="disable-cursor" value="false" />
 
     <!-- ANDROID -->
-    <preference name="android-minSdkVersion" value="16" />
+    <preference name="android-minSdkVersion" value="auto" />
     <preference name="android-installLocation" value="auto" />
 
     <!-- IOS -->
@@ -46,13 +45,8 @@
   <plugin name="cordova-plugin-whitelist" spec="https://github.com/apache/cordova-plugin-whitelist" source="git" />
   <plugin name="ionic-plugin-keyboard" spec="https://github.com/driftyco/ionic-plugin-keyboard" source="git" />
 
-  
-
-
-  <!-- DEFINE CROSSWALK -->
-  <preference name="android-build-tool" value="gradle" />
-  <plugin name="org.crosswalk.engine" spec="https://github.com/crosswalk-project/cordova-plugin-crosswalk-webview#1.5.0" source="git" />
-
+  <!-- AZURE PLUGIN -->
+  <plugin name="cordova-plugin-ms-adal" spec="https://github.com/AzureAD/azure-activedirectory-library-for-cordova" source="git" />
 
 
 </widget>
