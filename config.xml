@@ -11,6 +11,7 @@
 
   <access origin="*"/>
 
+    <preference name='phonegap-version' value='cli-6.3.0' />
     <preference name="permissions" value="none" />
     <preference name="orientation" value="portrait" />
     <preference name="fullscreen" value="false" />
