@@ -20,7 +20,33 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
-  });
+
+    //PUSHWOOSH
+    var pushwoosh = cordova.require("pushwoosh-cordova-plugin.PushNotification");
+
+    // Should be called before pushwoosh.onDeviceReady
+    document.addEventListener('push-notification', function(event) {
+      var notification = event.notification;
+      // handle push open here
+      alert('notificacao: '+notification);
+    });
+
+    // Initialize Pushwoosh. This will trigger all pending push notifications on start.
+    pushNotification.onDeviceReady({ projectid: "470858217527", appid : "E2775-E60A4" });
+
+    pushwoosh.registerDevice(
+      function(status) {
+        var pushToken = status.pushToken;
+          // handle successful registration here
+          alert('push token: '+pushToken);
+      },
+      function(status) {
+        // handle registration error here
+      }
+    );
+
+
+  });//end ready event
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
