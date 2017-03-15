@@ -2,14 +2,26 @@ var ControllersModule = angular.module('starter.controllers', [])
 
 ControllersModule.controller('DashCtrl', function($scope) {
 
+	var authority = "https://login.windows.net/common",
+	    redirectUri = "http://MyDirectorySearcherApp",
+	    resourceUri = "https://graph.windows.net",
+	    clientId = "a5d92493-ae5a-4a9f-bcbf-9f1d354067d3",
+	    graphApiVersion = "2013-11-08";
+
 	// Shows user authentication dialog if required
 	function authenticate(authCompletedCallback, errorCallback) {
+		if(Microsoft){
+			$scope.logMS = 'API FOUND';
+		}
 	  var authContext = new Microsoft.ADAL.AuthenticationContext(authority);
 	  authContext.tokenCache.readItems().then(function (items) {
 	    if (items.length > 0) {
 	        authority = items[0].authority;
 	        authContext = new Microsoft.ADAL.AuthenticationContext(authority);
 	    }
+
+	    $scope.logMS = 'log in Attempt';
+
 	    // Attempt to authorize user silently
 	    authContext.acquireTokenSilentAsync(resourceUri, clientId)
 	    .then(authCompletedCallback, function () {
@@ -20,12 +32,14 @@ ControllersModule.controller('DashCtrl', function($scope) {
 	  });
 	};
 
-	authenticate(function(authResponse) {
-	  console.log("Token acquired: " + authResponse.accessToken);
-	  console.log("Token will expire on: " + authResponse.expiresOn);
-	}, function(err) {
-	  console.log("Failed to authenticate: " + err);
-	});
+	$scope.loginMS = function(){
+		authenticate(function(authResponse) {
+		  console.log("Token acquired: " + authResponse.accessToken);
+		  console.log("Token will expire on: " + authResponse.expiresOn);
+		}, function(err) {
+		  console.log("Failed to authenticate: " + err);
+		});
+	}
 
 
 });
