@@ -12,7 +12,6 @@ ControllersModule.controller('DashCtrl', function($scope) {
 	function authenticate(authCompletedCallback, errorCallback) {
 		if(Microsoft){
 			$scope.logMS = 'API FOUND';
-			$scope.$apply();
 		}
 	  var authContext = new Microsoft.ADAL.AuthenticationContext(authority);
 	  authContext.tokenCache.readItems().then(function (items) {
