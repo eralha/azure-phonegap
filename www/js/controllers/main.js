@@ -36,8 +36,12 @@ ControllersModule.controller('DashCtrl', function($scope) {
 		authenticate(function(authResponse) {
 		  console.log("Token acquired: " + authResponse.accessToken);
 		  console.log("Token will expire on: " + authResponse.expiresOn);
+
+		  $scope.logMS = 'User loged in';
 		}, function(err) {
 		  console.log("Failed to authenticate: " + err);
+
+		  $scope.logMS = 'User loged out';
 		});
 	}
 
