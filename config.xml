@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<widget id="com.netmais.BLankApp" version="1.1.2" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+  <name>blank</name>
+  <description>
+        An Ionic Framework and Cordova project.
+    </description>
+  <author email="you@example.com" href="http://example.com/">
+      Your Name Here
+    </author>
+  <content src="index.html"/>
+
+  <access origin="*"/>
+  <preference name="webviewbounce" value="false"/>
+  <preference name="UIWebViewBounce" value="false"/>
+  <preference name="DisallowOverscroll" value="true"/>
+  <preference name="SplashScreenDelay" value="2000"/>
+  <preference name="FadeSplashScreenDuration" value="2000"/>
+  <preference name="android-minSdkVersion" value="16"/>
+  <preference name="BackupWebStorage" value="none"/>
+  <feature name="StatusBar">
+    <param name="ios-package" value="CDVStatusBar" onload="true"/>
+  </feature>
+
+
+  <plugin name="cordova-plugin-console" spec="https://github.com/apache/cordova-plugin-console" source="git" />
+  <plugin name="cordova-plugin-device" spec="https://github.com/apache/cordova-plugin-device" source="git" />
+  <plugin name="cordova-plugin-splashscreen" spec="https://github.com/apache/cordova-plugin-splashscreen" source="git" />
+  <plugin name="cordova-plugin-statusbar" spec="https://github.com/apache/cordova-plugin-statusbar" source="git" />
+  <plugin name="cordova-plugin-whitelist" spec="https://github.com/apache/cordova-plugin-whitelist" source="git" />
+  <plugin name="ionic-plugin-keyboard" spec="https://github.com/driftyco/ionic-plugin-keyboard" source="git" />
+
+  <!-- AZURE PLUGIN -->
+  <plugin name="cordova-plugin-ms-adal" spec="https://github.com/AzureAD/azure-activedirectory-library-for-cordova" source="git" />
+
+
+  <!-- DEFINE CROSSWALK -->
+  <preference name="android-build-tool" value="gradle" />
+  <plugin name="org.crosswalk.engine" spec="https://github.com/crosswalk-project/cordova-plugin-crosswalk-webview#1.5.0" source="git" />
+
+
+
+</widget>
