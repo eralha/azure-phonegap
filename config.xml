@@ -49,8 +49,9 @@
   <!-- AZURE PLUGIN -->
   <plugin name="cordova-plugin-ms-adal" spec="https://github.com/AzureAD/azure-activedirectory-library-for-cordova" source="git" />
 
-  <!-- DEFINE CROSSWALK -->
-  <preference name="android-build-tool" value="gradle" />
-  <plugin name="org.crosswalk.engine" spec="https://github.com/crosswalk-project/cordova-plugin-crosswalk-webview#1.5.0" source="git" />
+  <!-- DEFINE CROSSWALK 
+    <preference name="android-build-tool" value="gradle" />
+    <plugin name="org.crosswalk.engine" spec="https://github.com/crosswalk-project/cordova-plugin-crosswalk-webview#1.5.0" source="git" />
+  -->
 
 </widget>
