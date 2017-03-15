@@ -21,6 +21,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       StatusBar.styleDefault();
     }
 
+    /* PUSHWOOSH
     //PUSHWOOSH
     var pushwoosh = cordova.require("pushwoosh-cordova-plugin.PushNotification");
 
@@ -44,6 +45,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         // handle registration error here
       }
     );
+  */
+
+    var notificationOpenedCallback = function(jsonData) {
+      alert("Notification opened:\n" + JSON.stringify(jsonData));
+      console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+    };
+
+    // TODO: Update with your OneSignal AppId before running.
+    window.plugins.OneSignal
+      .startInit("bbcee36f-fadf-4366-b65b-ead86557f5b4")
+      .handleNotificationOpened(notificationOpenedCallback)
+      .endInit();
 
 
   });//end ready event

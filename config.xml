@@ -46,8 +46,12 @@
   <plugin name="cordova-plugin-whitelist" spec="https://github.com/apache/cordova-plugin-whitelist" source="git" />
   <plugin name="ionic-plugin-keyboard" spec="https://github.com/driftyco/ionic-plugin-keyboard" source="git" />
 
-  <!-- PUSHWOOSH -->
+  <!-- OPENSIGNAL -->
+  <plugin name="onesignal-cordova-plugin" spec="https://github.com/OneSignal/OneSignal-Cordova-SDK" source="git" />
+
+  <!-- PUSHWOOSH 
   <plugin name="pushwoosh-cordova-plugin" spec="https://github.com/Pushwoosh/pushwoosh-phonegap-plugin" source="git" />
+  -->
 
   <!-- AZURE PLUGIN -->
   <plugin name="cordova-plugin-ms-adal" spec="https://github.com/AzureAD/azure-activedirectory-library-for-cordova" source="git" />
