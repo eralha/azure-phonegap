@@ -12,6 +12,7 @@ ControllersModule.controller('DashCtrl', function($scope) {
 	function authenticate(authCompletedCallback, errorCallback) {
 		if(Microsoft){
 			$scope.logMS = 'API FOUND';
+			$scope.$apply();
 		}
 	  var authContext = new Microsoft.ADAL.AuthenticationContext(authority);
 	  authContext.tokenCache.readItems().then(function (items) {
@@ -21,6 +22,7 @@ ControllersModule.controller('DashCtrl', function($scope) {
 	    }
 
 	    $scope.logMS = 'log in Attempt';
+	    $scope.$apply();
 
 	    // Attempt to authorize user silently
 	    authContext.acquireTokenSilentAsync(resourceUri, clientId)
@@ -37,11 +39,13 @@ ControllersModule.controller('DashCtrl', function($scope) {
 		  console.log("Token acquired: " + authResponse.accessToken);
 		  console.log("Token will expire on: " + authResponse.expiresOn);
 
-		  $scope.logMS = 'User loged in';
+		  $scope.logMS = 'User loged in expira a: '+authResponse.expiresOn;
+		  $scope.$apply();
 		}, function(err) {
 		  console.log("Failed to authenticate: " + err);
 
 		  $scope.logMS = 'User loged out';
+		  $scope.$apply();
 		});
 	}
 
